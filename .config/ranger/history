@@ -1,0 +1,50 @@
+Window
+mkdir Window
+mkdir X
+mkdir C
+`
+open_with untar
+open_with tar
+open_with 
+mkdir .icons
+mv Documents
+mkdir Documents
+find 
+find Bass
+find 61
+open_with sxiv
+mkdir Development
+touch preview
+search romeo
+search Romeo
+rename 09 - Romeo and Rebecca.mp3
+rename 09 - Romeo & Rebecca.mp3
+rename 11 - Reebok Commercial.mp3
+open_with unzip
+mkdir Homework
+mkdir .themes
+mkdir dark
+mkdir light
+mkdir manhatan
+rename screenshoot.png
+ln -s ~/Im
+search manh
+mv manhatan manhattan
+mvdir manhatan manhattan
+h
+mkdir Manhattan
+touch README.md
+open_with nvim
+m
+mkdir gruvbox
+mkdir dracula
+search ico
+search crit
+search fire
+
+search conf
+search .con
+mkdir blackdore
+rename lyrics
+delete
+rename .lyrics
