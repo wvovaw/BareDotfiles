@@ -1,0 +1,32 @@
+# Add name of the program as target
+TARGET = out
+CC = cc
+# Add libs
+LIBS = -lm 
+CFLAGS = -std=c99 -pedantic -Wall -Wno-deprecated-declarations -Os
+OBJS = $(patsubst %.c, %.o, $(wildcard *.c))
+INCS = $(wildcard *.h)
+
+all : options ${TARGET}
+
+%.o: %.c $(INCS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PRECIOUS: $(TARGET) $(OBJS)
+
+$(TARGET) : $(OBJS)
+	$(CC) $(OBJS) -Wall $(LIBS) -o $@
+
+options:
+	@echo Build options
+	@echo "CFLAGS	= ${CFLAGS}"
+	@echo "CC	= ${CC}"
+	@echo "INCS	= ${INCS}"
+	@echo "LIBS	= ${LIBS}"
+	@echo "OBJS	= ${OBJS}"
+
+clean:
+	-rm -f *.o
+	-rm -f $(TARGET)
+
+.PHONY: all clean
