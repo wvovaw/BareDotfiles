@@ -77,11 +77,12 @@ statusbar_visibility = "yes"
 titles_visibility = "yes"
 
 
-progressbar_look =  "-"
+# progressbar_look =  ""
+progressbar_look =  "━─"
 progressbar_boldness = "yes"
 progressbar_elapsed_color = "magenta"
 
-now_playing_prefix = " "
+now_playing_prefix = ""
 song_status_format = " $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 autocenter_mode = "yes"
 centered_cursor = "yes"

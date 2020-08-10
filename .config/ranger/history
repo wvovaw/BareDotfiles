@@ -1,11 +1,3 @@
-Window
-mkdir Window
-mkdir X
-mkdir C
-`
-open_with untar
-open_with tar
-open_with 
 mkdir .icons
 mv Documents
 mkdir Documents
@@ -20,13 +12,11 @@ search Romeo
 rename 09 - Romeo and Rebecca.mp3
 rename 09 - Romeo & Rebecca.mp3
 rename 11 - Reebok Commercial.mp3
-open_with unzip
 mkdir Homework
 mkdir .themes
 mkdir dark
 mkdir light
 mkdir manhatan
-rename screenshoot.png
 ln -s ~/Im
 search manh
 mv manhatan manhattan
@@ -41,10 +31,20 @@ mkdir dracula
 search ico
 search crit
 search fire
-
 search conf
 search .con
 mkdir blackdore
 rename lyrics
-delete
 rename .lyrics
+search 168
+search 148
+rename .cargo
+search Ima
+rename kVibrant
+rename screenshoot2.png
+rename screenshoot.png
+rename screenshot2.png
+
+open_with%space
+open_with unzip
+delete

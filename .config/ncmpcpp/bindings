@@ -99,8 +99,6 @@
 #def_key "left"
 #  volume_down
 #
-#def_key "-"
-#  volume_down
 #
 #def_key ":"
 #  execute_command
@@ -403,15 +401,13 @@
 #	find_item_forward
 
 def_key "+"
-    show_clock
-def_key "="
     volume_up
-
+def_key "-"
+  volume_down
 def_key "j"
     scroll_down
 def_key "k"
     scroll_up
-
 def_key "ctrl-u"
     page_up
 #push_characters "kkkkkkkkkkkkkkk"
@@ -431,12 +427,10 @@ def_key "l"
 
 def_key "."
     show_lyrics
-
 def_key "n"
     next_found_item
 def_key "N"
     previous_found_item
-
 # not used but bound
 def_key "J"
     move_sort_order_down

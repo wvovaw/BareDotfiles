@@ -1,18 +1,14 @@
-# .bashrc
-#You don't need this line
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+[ -f ~/.aliases ] && . ~/.aliases
+[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+export EDITOR="nvim"
+export TERMINAL="st"
+export LOCATION="orenburg"
+export PATH=$PATH:/home/wvovaw/scripts:/home/wvovaw/.local/bin:/usr/lib/spicetify-cli
 
-# User specific aliases and functions
+set -o vi
