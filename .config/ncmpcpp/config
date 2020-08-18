@@ -1,6 +1,6 @@
 ##
 # Notify
-execute_on_song_change = notify-send -a ncmpcpp "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
+# execute_on_song_change = notify-send -a ncmpcpp "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 # Files
  mpd_music_dir = ~/Music  
  lyrics_directory  = ~/.lyrics

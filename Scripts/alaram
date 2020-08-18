@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Play an alarm at a set time
+# Joe Standring <git@joestandring.com>
+# GNU GPLv3
+
+ALARMSOUND="/usr/share/sounds/MIUI/stereo/system-ready.ogg"
+
+if [ $# -eq 4 ]; then
+  HOU=$1
+  MIN=$2
+  SEC=$3
+  MSG=$4
+elif [ $# -eq 3 ]; then
+  HOU=$1
+  MIN=$2
+  MSG=$3
+else
+  read -r -p 'Hour (00-23): ' HOU
+  read -r -p 'Minuite (00-59): ' MIN
+  read -r -p 'Second (00-59): ' SEC
+  read -r -p 'Message to print' MSG
+  echo""
+fi
+
+if [ "$HOU" -gt 23 ]; then
+  HOU=23;
+fi
+if [ "$HOU" -lt 0 ]; then
+  HOU=0;
+fi
+if [ "$MIN" -gt 59 ]; then
+  MIN=59;
+fi
+if [ "$MIN" -lt 0 ]; then
+  MIN=0;
+fi
+if [ "$SEC" -gt 59 ]; then
+  SEC=59;
+fi
+if [ "$SEC" -lt 0 ]; then
+  SEC=0;
+fi
+
+ALARM=$(printf "%d:%02d:%02d" "$HOU" "$MIN" "$SEC")
+
+printf "Alarm set for %s" "$ALARM"
+
+TIMEREACHED=0
+while [ "$TIMEREACHED" -eq 0 ]
+do
+  if [[ "$(date +%H:%M:%S | tr -d :)" > "$(echo "$ALARM" | tr -d :)" ]]; then
+    TIMEREACHED=1
+    notify-send -a Countdown -i /usr/share/icons/Adwaita/48x48/legacy/appointment-soon.png $MSG
+    paplay "$ALARMSOUND"
+  fi
+  sleep 10;
+done

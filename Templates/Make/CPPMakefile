@@ -1,0 +1,35 @@
+# Add name of the program as target
+TARGET = out
+CXX = g++
+# Add libs
+LIBS = -lm 
+CPPFLAGS = -std=c++14 -pedantic -Wall -Wno-deprecated-declarations -Os
+OBJS = $(patsubst %.cpp, %.o, $(wildcard *.cpp))
+INCS = $(wildcard *.h)
+
+all : options ${TARGET}
+
+debug: CPPFLAGS += -g -DDEBUG
+debug: options ${TARGET}
+
+%.o: %.c $(INCS)
+	$(CXX) $(CPPFLAGS) -c $< -o $@
+
+.PRECIOUS: $(TARGET) $(OBJS)
+
+$(TARGET) : $(OBJS)
+	$(CXX) $(OBJS) -Wall $(LIBS) -o $@
+
+options:
+	@echo Build options
+	@echo "CPPFLAGS	= ${CPPFLAGS}"
+	@echo "CXX	= ${CXX}"
+	@echo "INCS	= ${INCS}"
+	@echo "LIBS	= ${LIBS}"
+	@echo "OBJS	= ${OBJS}"
+
+clean:
+	-rm -f *.o
+	-rm -f $(TARGET)
+
+.PHONY: all clean

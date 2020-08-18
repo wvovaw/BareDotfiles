@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "270x5-10+35"
+    geometry = "270x5-8+39"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -166,7 +166,8 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Papirus-Light/16x16/status/:/usr/share/icons/Papirus-Light/16x16/devices/
+    # icon_path = /usr/share/icons/Papirus-Light/16x16/status/:/usr/share/icons/Papirus-Light/16x16/devices/
+    icon_path = /usr/share/icons/Adwaita/48x48/status:/usr/share/icons/Adwaita/48x48/devices
 
     ### History ###
 
