@@ -19,7 +19,7 @@ Plugin 'junegunn/fzf', {'do': { -> fzf#install() } } " FZF
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'Xuyuanp/nerdtree-git-plugin' " Add git interraction to neardtree
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " Highlight nerdtree
-Plugin 'benmills/vimux' "Tmux integration. Try Vimux in command mode
+" Plugin 'benmills/vimux' "Tmux integration. Try Vimux in command mode
 Plugin 'tpope/vim-fugitive' "Ultimate git helper
 Plugin 'tpope/vim-commentary' "Comment/uncomment lines with gcc or gc in visual mode
 " Plugin 'dracula/vim', { 'name': 'dracula' } "Dracula theme 
@@ -35,8 +35,8 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'} " Vim becomves smarter
 Plugin 'airblade/vim-gitgutter' " Show line changes 
 Plugin 'mhinz/vim-startify' " Vim start winow
 Plugin 'machakann/vim-highlightedyank' " Highlight yunked text
-Plugin 'wsdjeg/vim-todo' " Todo manager BROKEN
-Plugin 'aurieh/discord.nvim' " Discord RP
+Plugin 'wsdjeg/vim-todo' " Todo manager BROKEN (Fixed)
+" Plugin 'aurieh/discord.nvim' " Discord RP
 Plugin 'chrisbra/colorizer' " Colorize hex colors
 call vundle#end()
 

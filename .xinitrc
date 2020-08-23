@@ -16,17 +16,14 @@ autorandr -c
 exec dunst &
 
 # Automount usb and more
-# udiskie &
+udiskie &
 
 # Setting kb layouts
-setxkbmap -layout us,us,ru -variant ,colemak, -option grp:alt_shift_toggle
+# setxkbmap -layout us,us,ru -variant ,colemak, -option grp:alt_shift_toggle
+setxkbmap -layout us,ru -option grp:alt_shift_toggle
 
 # Restore wallpaper
 exec ~/.fehbg &
-
-# run MDP and MPD controller
-# [ ! -s ~/.config/mpd/pid ] && mpd &
-# mpDris2 &
 
 # Play a sound
 paplay /usr/share/sounds/MIUI/stereo/desktop-screen-lock.ogg

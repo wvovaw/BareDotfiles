@@ -167,8 +167,9 @@ map U unselect
 # Movement
 map gtr cd ~/.local/share/Trash/files
 map gus cd /run/media/wvovaw
-map gv cd ~/Videos
+map gm cd ~/Music
 map gi cd ~/Images
+map gv cd ~/Videos
 map gd cd ~/Downloads
 map gD cd ~/Documents
 map gs cd ~/scripts

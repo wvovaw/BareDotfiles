@@ -2,8 +2,8 @@
 set folder = "imaps://vladimir5313375015@gmail.com@imap.gmail.com:993"
 set smtp_url = "smtp://vladimir5313375015@gmail.com@smtp.gmail.com:465"
 
-set imap_pass = `/bin/pass show google/vladimir5313375015@gmail.com`
-set smtp_pass = " `/bin/pass show google/vladimir5313375015@gmail.com`
+set imap_pass = `/bin/pass show google.com/vladimir5313375015@gmail.com`
+set smtp_pass = " `/bin/pass show google.com/vladimir5313375015@gmail.com`
 
 set from = "vladimir5313375015@gmail.com:587"
 set realname = "Vladimir"
