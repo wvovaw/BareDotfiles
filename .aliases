@@ -38,6 +38,7 @@ alias mci='make clean install'
 alias smci='sudo make clean install'
 alias mu='make uninstall'
 alias smu='sudo make uninstall'
+alias run='make clean debug; ./out'
 
 # ls to exa
 alias la='exa -al --color=always --group-directories-first'

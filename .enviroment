@@ -9,6 +9,7 @@ export OPENER="xdg-open"
 export PAGER="less"
 export WM="dwm"
 export LOCATION="orenburg"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 export GOROOT=/usr/local/go
 export GOPATH=~/Dev/Go

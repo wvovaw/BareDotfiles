@@ -22,9 +22,10 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " Highlight nerdtree
 " Plugin 'benmills/vimux' "Tmux integration. Try Vimux in command mode
 Plugin 'tpope/vim-fugitive' "Ultimate git helper
 Plugin 'tpope/vim-commentary' "Comment/uncomment lines with gcc or gc in visual mode
-" Plugin 'dracula/vim', { 'name': 'dracula' } "Dracula theme 
+Plugin 'dracula/vim', { 'name': 'dracula' } "Dracula theme 
 Plugin 'arcticicestudio/nord-vim' " Nord theme
-" Plugin 'morhetz/gruvbox' " Gruuuuuuvboooox
+Plugin 'altercation/vim-colors-solarized' " Solarized
+Plugin 'morhetz/gruvbox' " Gruuuuuuvboooox
 Plugin 'ryanoasis/vim-devicons' "NerdFont for vim and NerdTree
 Plugin 'vim-airline/vim-airline' "Statusline mod
 Plugin 'vim-airline/vim-airline-themes' "And themes
@@ -36,8 +37,9 @@ Plugin 'airblade/vim-gitgutter' " Show line changes
 Plugin 'mhinz/vim-startify' " Vim start winow
 Plugin 'machakann/vim-highlightedyank' " Highlight yunked text
 Plugin 'wsdjeg/vim-todo' " Todo manager BROKEN (Fixed)
-" Plugin 'aurieh/discord.nvim' " Discord RP
 Plugin 'chrisbra/colorizer' " Colorize hex colors
+Plugin 'fatih/vim-go' " Go utils
+Plugin 'editorconfig/editorconfig-vim'
 call vundle#end()
 
 """Commands
@@ -67,21 +69,22 @@ map <C-p> :FZF<CR>
 let g:highlightedyank_highlight_duration = 1000
 """
 
-"""Vim theme stuf
-"Dracula
+"Vim theme stuf
 " colorscheme dracula 
-colorscheme nord
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = 'hard'
-" let g:gruvbox_italic = '1'
-" let g:italicize_strings = '1'
-"""
+" colorscheme solarized
+" colorscheme nord
+
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = '1'
+let g:italicize_strings = '1'
+"
 
 """Airline stuf
 "Theme
 " let g:airline_theme = 'dracula'
-" let g:airline_theme = 'gruvbox'
-let g:airline_theme = 'nord'
+let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'solarized'
 "Enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = "\uE0C6"

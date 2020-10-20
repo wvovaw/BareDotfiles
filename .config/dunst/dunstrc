@@ -275,9 +275,14 @@
 
 [urgency_low]
     timeout = 10
-    background = "#000000"
-    foreground = "#cdcdcd"
-    frame_color = "#3b3b3b"
+
+    background = "#002b36"
+    foreground = "#93a1a1"
+    frame_color = "#2aa198"
+
+    # background = "#000000" Black
+    # foreground = "#cdcdcd"
+    # frame_color = "#3b3b3b"
 
     # background = "#282a36" Dracula
     # foreground = "#f8f8f2"
@@ -287,9 +292,14 @@
 
 [urgency_normal]
     timeout = 15
-    background = "#000000"
-    foreground = "#cdcdcd"
-    frame_color = "#777777"
+
+    background = "#002b36"
+    foreground = "#93a1a1"
+    frame_color = "#859900"
+
+    # background = "#000000" Black
+    # foreground = "#cdcdcd"
+    # frame_color = "#777777"
 
     # background = "#282a36" Dracula
     # foreground = "#f8f8f2"
@@ -299,9 +309,14 @@
 
 [urgency_critical]
     timeout = 0
-    background = "#000000"
-    foreground = "#cdcdcd"
-    frame_color = "#cdcdcd"
+
+    background = "#002b36"
+    foreground = "#93a1a1"
+    frame_color = "#dc322f"
+
+    # background = "#000000" Black
+    # foreground = "#cdcdcd"
+    # frame_color = "#cdcdcd"
 
     # background = "#282a36" Dracula
     # foreground = "#f8f8f2"

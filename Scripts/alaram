@@ -4,7 +4,8 @@
 # Joe Standring <git@joestandring.com>
 # GNU GPLv3
 
-ALARMSOUND="/usr/share/sounds/MIUI/stereo/system-ready.ogg"
+ALARMSOUND=/usr/share/sounds/MIUI/stereo/system-ready.ogg
+ICONPATH=/usr/share/icons/Adwaita/48x48/legacy/appointment-soon.png
 
 if [ $# -eq 4 ]; then
   HOU=$1
@@ -20,7 +21,7 @@ else
   read -r -p 'Minuite (00-59): ' MIN
   read -r -p 'Second (00-59): ' SEC
   read -r -p 'Message to print' MSG
-  echo""
+  echo''
 fi
 
 if [ "$HOU" -gt 23 ]; then
@@ -42,17 +43,17 @@ if [ "$SEC" -lt 0 ]; then
   SEC=0;
 fi
 
-ALARM=$(printf "%d:%02d:%02d" "$HOU" "$MIN" "$SEC")
+ALARM=$(printf '%d:%02d:%02d' "$HOU" "$MIN" "$SEC")
 
-printf "Alarm set for %s" "$ALARM"
+printf 'Alarm set for %s' "$ALARM"
 
 TIMEREACHED=0
 while [ "$TIMEREACHED" -eq 0 ]
 do
   if [[ "$(date +%H:%M:%S | tr -d :)" > "$(echo "$ALARM" | tr -d :)" ]]; then
     TIMEREACHED=1
-    notify-send -a Countdown -i /usr/share/icons/Adwaita/48x48/legacy/appointment-soon.png $MSG
-    paplay "$ALARMSOUND"
+    notify-send -a Alaram -i $ICONPATH $MSG
+    paplay $ALARMSOUND
   fi
   sleep 10;
 done

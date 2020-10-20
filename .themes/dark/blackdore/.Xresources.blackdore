@@ -46,11 +46,12 @@
 *.color66: #000000
 *color66:  #000000
 
-dwm.normbgcolor: #cdcdcd
-dwm.normfgcolor: #000000
+dwm.normbgcolor: #000000
+dwm.normfgcolor: #cdcdcd
 
-dwm.selbgcolor: #000000 
-dwm.selfgcolor: #cdcdcd
+dwm.selbgcolor: #cdcdcd 
+dwm.selfgcolor: #000000
 
 dwm.selbordercolor: #cdcdcd
 dwm.normbordercolor: #000000
+#include "/home/wvovaw/.config/xterm/Resources"
