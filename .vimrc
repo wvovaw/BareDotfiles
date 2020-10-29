@@ -5,6 +5,8 @@ set t_Co=256
 set encoding=UTF-8
 set mouse=n
 set autoindent
+set cindent
+" set smartindent
 set et 
 set sts=2
 set sw=2 
@@ -26,6 +28,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' } "Dracula theme
 Plugin 'arcticicestudio/nord-vim' " Nord theme
 Plugin 'altercation/vim-colors-solarized' " Solarized
 Plugin 'morhetz/gruvbox' " Gruuuuuuvboooox
+Plugin 'tomasiser/vim-code-dark' " Code colorscheme
 Plugin 'ryanoasis/vim-devicons' "NerdFont for vim and NerdTree
 Plugin 'vim-airline/vim-airline' "Statusline mod
 Plugin 'vim-airline/vim-airline-themes' "And themes
@@ -40,6 +43,8 @@ Plugin 'wsdjeg/vim-todo' " Todo manager BROKEN (Fixed)
 Plugin 'chrisbra/colorizer' " Colorize hex colors
 Plugin 'fatih/vim-go' " Go utils
 Plugin 'editorconfig/editorconfig-vim'
+" Plugin 'Raimondi/delimitMate' " Doesn't work
+Plugin 'jiangmiao/auto-pairs' " Braces control
 call vundle#end()
 
 """Commands
@@ -52,7 +57,9 @@ nmap <leader>k :OneBuf<cr>
 nmap <silent> <leader>o :OpenTodo<cr>
 nmap <silent> <leader>h :noh<cr>
 nmap <Leader>y "+y
+nmap <Leader>Y "+Y
 nmap <Leader>p "+p
+nmap <Leader>P "+P
 map <silent> <Leader>n :set nornu nonu<cr>
 map <silent> <Leader>N :set nu rnu<cr>
 """
@@ -73,17 +80,19 @@ let g:highlightedyank_highlight_duration = 1000
 " colorscheme dracula 
 " colorscheme solarized
 " colorscheme nord
+colorscheme codedark
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = '1'
-let g:italicize_strings = '1'
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_italic = '1'
+" let g:italicize_strings = '1'
 "
 
 """Airline stuf
 "Theme
 " let g:airline_theme = 'dracula'
-let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'codedark'
 " let g:airline_theme = 'solarized'
 "Enable tabline
 let g:airline#extensions#tabline#enabled = 1
