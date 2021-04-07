@@ -319,7 +319,7 @@ label-indicator-underline = ${colors.secondary}
 
 [module/updates]
 type = custom/script
-exec = xbps-install -un | wc -l
+exec = xbps-install -Mun | wc -l
 interval = 600
 format-prefix= "ﰩ "
 format-underline = ${colors.secondary}

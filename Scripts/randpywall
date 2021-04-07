@@ -5,9 +5,9 @@
 #
 # Vladimir Ivakhno <git@wvovaw.com>
 # GNU GPLv3
-# Dependencies: pywall, feh, pywal
+# Dependencies: feh, pywal
 
-PATHTOIMAGES='/home/wvovaw/Images'
+PATHTOIMAGES='/home/wvovaw/Pictures'
 IFS=$'\n' # Helps to handle filenames and dirnames that contain spaces and other symbols
 USEWAL=$1 # If -w pased then wal will be used
 main() {

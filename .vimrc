@@ -6,7 +6,6 @@ set encoding=UTF-8
 set mouse=n
 set autoindent
 set cindent
-" set smartindent
 set et 
 set sts=2
 set sw=2 
@@ -45,10 +44,12 @@ Plugin 'fatih/vim-go' " Go utils
 Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'Raimondi/delimitMate' " Doesn't work
 Plugin 'jiangmiao/auto-pairs' " Braces control
+Plugin 'posva/vim-vue' " VUE js 
 call vundle#end()
 
-"""Commands
-command! OneBuf execute '%bd|edit #|normal `"'
+"""Includes
+so ~/.cocrc.vim
+so ~/.startifyrc.vim
 """
 
 """Mappings
@@ -67,9 +68,13 @@ map <silent> <Leader>N :set nu rnu<cr>
 """NERDtree stuf
 filetype plugin indent on
 map <C-n> :NERDTreeToggle<CR> 
-"""
 """FZF stuf
 map <C-p> :FZF<CR> 
+"""
+
+"""Commands
+command! OneBuf execute '%bd|edit #|normal `"'
+au BufNewFile,BufRead *.ejs set filetype=html
 """
 
 """YunkHighlight stuf
@@ -109,10 +114,4 @@ let g:webdevicons_enable_airline_statusline = 1 " Enable to statusline
 let g:webdevicons_enable_ctrlp = 1  " Enable for CtrlP
 " :echo WebDevIconsGetFileTypeSymbol(expand('%:t'))
 let g:airline_section_x = '%{airline#util#wrap(airline#parts#filetype(),1)}%{" "}%{WebDevIconsGetFileTypeSymbol()}' " Add glyph after filetype
-"""
-"""Include .cocrc 
-so ~/.cocrc.vim
-"""
-"""Include .startifyrc
-so ~/.startifyrc.vim
 """

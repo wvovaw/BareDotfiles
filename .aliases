@@ -20,14 +20,15 @@ alias xqr='sudo xbps-query -Rs'
 
 # Special comands
 alias please='sudo !!'
-alias mm='sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sdb1 ~/Windows/X'
+alias mm='sudo mount -t ntfs-3g -o rw,nls=utf8,umask=0222 /dev/sdb1 ~/Windows/Y'
 alias mw='sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda4 ~/Windows/C'
 alias wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
 alias off='sudo shutdown -P now'
 alias reb='sudo reboot now'
 alias synctime='sudo ntpdate -u 0.ru.pool.ntp.org'
 alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 1 unimatrix -n -s 99 -l orCs || clear'
-# alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias cls=clear
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Make
 alias mi='make install'

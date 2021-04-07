@@ -1,3 +1,6 @@
+# Run network-manager
+nm-applet &
+
 #Merge Xresources
 xrdb -merge -I$HOME ~/.Xresources
 
@@ -14,6 +17,9 @@ autorandr -c
 
 # Start Dunst notifyer
 exec dunst &
+
+# Add bindings for special keys in x session
+xbindkeys &
 
 # Automount usb and more
 udiskie &
@@ -35,7 +41,6 @@ exec ~/.config/polybar/run.sh &
 # exec /bin/startdwm
 # DWM with dbus working correctly
 exec dbus-launch --exit-with-session dwm >/dev/null 2>&1
-
 
 # Restore the last color scheme
 # wal -R

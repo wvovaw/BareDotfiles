@@ -1,4 +1,2 @@
 #!/bin/bash
-killall dwm_bar.sh
-~/Sources/dwm-bar/dwm_bar.sh &
 /usr/bin/spotifyorig
