@@ -159,7 +159,7 @@ label-title = %title%
 label-title-padding = 2
 label-title-background = ${colors.background-alt}
 label-title-foreground = ${colors.primary}
-label-title-maxlen = 40
+label-title-maxlen = 24
 
 ; Symbol of current layout
 ; Available tokens:
@@ -216,8 +216,8 @@ format = <label>
 exec = playerctl metadata --format "{{artist}} - {{title}}"
 exec-if = pgrep -x spotify || pgrep -x mpd
 click-left = playerctl play-pause
-scroll-up = playerctl next
-scroll-down = playerctl previous
+scroll-up = playerctl previous
+scroll-down = playerctl next
 format-prefix-foreground = ${colors.secondary}
 format-padding = 1
 interval = 1
@@ -275,6 +275,7 @@ label-song-ellipsis = true
 [module/pulseaudio]
 type = internal/pulseaudio
 ; format-volume = <label-volume> <bar-volume>
+click-right = pavucontrol &
 format-volume = <label-volume>
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}

@@ -1,9 +1,29 @@
 set previewer ~/.config/lf/preview
-# set previewer pistol
+set cleaner ~/.config/lf/cleaner
+# Origin https://github.com/cirala/lfimg
+# Dependencies:
+#    ffmpegthumbnailer
+#    ImageMagick
+#    poppler
+#    epub-thumbnailer
+#    bc
+#    bat (optional - color highlight for text files)
+#    chafa (optional - for image preview over SSH)
+#    unzip (optional - for .zip and .jar files)
+#    7z (optional - for .7z files)
+#    unrar (optional - for .rar files)
+#    catdoc (optional - for .doc files)
+#    docx2txt (optional - for .docx files)
+#    odt2txt (optional - for .odt and *.ods files)
+#    exiftool (optional - for music files)
+#    iso-info (optional - for .iso files)
+#    transmission (optional - for .torrent files)
+#
+
 # Basic Settings
+set ratios 1:2:3
 set preview true
 set hidden true
-set color256 true
 set drawbox true
 set icons true
 set ignorecase true
@@ -12,25 +32,25 @@ set ignorecase true
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
-        video/*|image/*/application/pdf) xdg-open "$f";;
-        *) xdg-open "$f" ;;
+        video/*|image/*/application/pdf) gio open "$f";;
+        *) gio open "$f" ;;
     esac
 }}
 
 cmd mkdir ${{
-  printf "Directory Name: "
+  printf " Directory Name: "
   read ans
   mkdir $ans
 }}
 
 cmd touch ${{
-  printf "File Name: "
+  printf "ﱐ File Name: "
   read ans
   $EDITOR $ans
 }}
 
 cmd chmod ${{
-  printf "Mode Bits: "
+  printf "﫥bits: "
   read ans
 
   for file in "$fx"
@@ -59,17 +79,15 @@ cmd setwallpaper %feh --bg-scale "$f"
 #   lf -remote "send $id $cmd \"$res\""
 # }}
 
-cmd dragon %dragon -a -x $fx
-cmd dragon-stay %dragon -a $fx
-cmd dragon-individual %dragon $fx
-cmd cpdragon %cpdragon
-cmd mvdragon %mvdragon
-cmd dlfile %dlfile
+cmd dragon %dragon -a -x $fx   # drag and drop selected file(s) and exit
+cmd dragon-stay %dragon -a $fx # drag and drop selected file(s) and stay
 
 # Archive bindings
 cmd unarchive ${{
   case "$f" in
       *.zip) unzip "$f" ;;
+      *.7z)  unzip "$f" ;;
+      *.rar) unrar "$f" ;;
       *.tar.gz) tar -xzvf "$f" ;;
       *.tar.bz2) tar -xjvf "$f" ;;
       *.tar) tar -xvf "$f" ;;
@@ -110,6 +128,9 @@ cmd restore_trash ${{
 
 cmd stripspace %stripspace "$f"
 
+# Autojump binding
+cmd go %lf -remote "send $id cd '$(autojump $1)'"
+
 # Bindings
 # Remove some defaults
 map m
@@ -124,6 +145,7 @@ map f
 
 # File Openers
 map ee $$EDITOR "$f"
+map ec %code-oss "$f"
 
 # Archive Mappings
 map az zip
@@ -139,11 +161,9 @@ map tr restore_trash
 
 # Dragon Mapping
 map dr dragon
-map ds dragon-stay
-map di dragon-individual
-map dm mvdragon
-map dc cpdragon
-map dl dlfile
+
+# Autojump Mapping
+map a push :aj<space>
 
 # Basic Functions
 map . set hidden!
@@ -168,10 +188,10 @@ map U unselect
 map gtr cd ~/.local/share/Trash/files
 map gus cd /run/media/wvovaw
 map gm cd ~/Music
-map gi cd ~/Images
+map gp cd ~/Pictures
 map gv cd ~/Videos
 map gd cd ~/Downloads
 map gD cd ~/Documents
-map gs cd ~/scripts
+map gs cd ~/Scripts
 map gS cd ~/Sources
 map gc cd ~/.config

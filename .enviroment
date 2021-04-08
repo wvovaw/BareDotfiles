@@ -2,7 +2,7 @@ export EDITOR="nvim"
 export READER="zathura"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
-export BROWSER="qutebrowser"
+export BROWSER="chromium"
 export VIDEO="mpv"
 export IMAGE="sxiv"
 export OPENER="xdg-open"
@@ -21,3 +21,11 @@ export SPICETIFY=/usr/lib/spicetify-cli
 export SCRIPTS=~/Scripts
 
 export PATH=$PATH:$SCRIPTS:$LBIN:$CARGOROOT/bin:$GOROOT/bin:$GOPATH/bin:$SPICETIFY
+
+LF_ICONS=$(sed ~/.config/diricons \
+            -e '/^[ \t]*#/d'       \
+            -e '/^[ \t]*$/d'       \
+            -e 's/[ \t]\+/=/g'     \
+            -e 's/$/ /')
+LF_ICONS=${LF_ICONS//$'\n'/:}
+export LF_ICONS

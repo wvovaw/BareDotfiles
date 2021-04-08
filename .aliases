@@ -7,6 +7,7 @@ alias wea2='curl -s "wttr.in/$LOCATION?format=2"'
 alias wea3='curl v2d.wttr.in/Orenburg'
 
 # Common aliases
+alias lf=/home/wvovaw/.config/lf/lfrun
 alias nv=nvim
 alias music=ncmpcpp 
 alias am=alsamixer
