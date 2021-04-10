@@ -1,0 +1,12 @@
+/* colors */
+
+@import "solarized_colors.rasi"
+
+* {
+  al:  @background;
+  bg:  @lightfg;
+  se:  @selected-urgent-background;
+  fg:  @foreground;
+  ac:  @separatorcolor; /**/
+}
+
