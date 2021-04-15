@@ -4,6 +4,9 @@ nm-applet &
 #Merge Xresources
 xrdb -merge -I$HOME ~/.Xresources
 
+# Run autorandr 
+autorandr -c
+
 # Composer
 # exec xcompmgr -o.95 &
 exec picom --experimental-backends &
@@ -11,18 +14,13 @@ exec picom --experimental-backends &
 # Status bar
 # exec ~/Sources/dwm-bar/dwm_bar.sh &
 # exec /home/wvovaw/.local/bin/dwmblocks &
-
-# Run autorandr 
-autorandr -c
+exec ~/.config/polybar/run.sh &
 
 # Start Dunst notifyer
 exec dunst &
 
 # Add bindings for special keys in x session
 xbindkeys &
-
-# Automount usb and more
-udiskie &
 
 # Setting kb layouts
 # setxkbmap -layout us,us,ru -variant ,colemak, -option grp:alt_shift_toggle
@@ -31,11 +29,11 @@ setxkbmap -layout us,ru -option grp:alt_shift_toggle
 # Restore wallpaper
 exec ~/.fehbg &
 
+# Automount usb and more
+udiskie &
+
 # Play a sound
 paplay /usr/share/sounds/MIUI/stereo/desktop-screen-lock.ogg
-
-# Run Polybar
-exec ~/.config/polybar/run.sh &
 
 # DWM session with reload feature
 # exec /bin/startdwm

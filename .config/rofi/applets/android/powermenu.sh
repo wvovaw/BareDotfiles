@@ -22,8 +22,16 @@ confirm_exit() {
   rofi -dmenu\
     -i\
     -no-fixed-num-lines\
-    -p "Are You Sure? : "\
+    -p "Are You Sure? "\
     -theme $dir/confirm.rasi
+  }
+
+slock_message() {
+  rofi -dmenu\
+    -i\
+    -no-fixed-num-lines\
+    -p "Message to display: "\
+    -theme $dir/textinput.rasi
   }
 
 # Message
@@ -62,7 +70,7 @@ case $chosen in
     elif [[ -f /usr/bin/betterlockscreen ]]; then
       betterlockscreen -l
     elif [[ -f /usr/bin/slock ]]; then
-      sudo slock
+      slock -m "$(slock_message)"
     fi
     ;;
   $suspend)

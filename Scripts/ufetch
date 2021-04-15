@@ -37,7 +37,7 @@ else
 fi
 
 ui='DWM' # Override because this var was returning wal -_-
-term='ST'
+term=$TERMINAL
 font='JetBrains Mono Nerd Font'
 
 ## DEFINE COLORS

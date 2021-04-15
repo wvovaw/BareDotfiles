@@ -69,6 +69,10 @@ cmd stouch ${{
 
 cmd setwallpaper %feh --bg-scale "$f"
 
+cmd run_script ${{
+  exec "$f"
+}}
+
 # cmd fzf_jump ${{
 #   res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
 #   if [ -f "$res" ]; then
@@ -142,10 +146,12 @@ map d
 map c
 map e
 map f
+map r
 
 # File Openers
 map ee $$EDITOR "$f"
 map ec %code-oss "$f"
+map rs run_script
 
 # Archive Mappings
 map az zip
@@ -177,7 +183,7 @@ map st stouch
 map md mkdir
 map ch chmod
 map bg setwallpaper
-map r rename
+map mv rename
 map gg top
 map G bottom
 map R reload
