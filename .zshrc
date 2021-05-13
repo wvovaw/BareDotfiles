@@ -14,8 +14,8 @@ source $ZSH/oh-my-zsh.sh
 # Load aliases
 [ -f ~/.aliases ] && . ~/.aliases
 
-# Load enviroment variables
-[ -f ~/.enviroment ] && . ~/.enviroment
+# Load environment variables
+[ -f ~/.environment ] && . ~/.environment
 
 set -o vi
 eval $(thefuck --alias)

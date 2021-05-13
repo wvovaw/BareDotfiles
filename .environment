@@ -9,7 +9,8 @@ export OPENER="xdg-open"
 export PAGER="bat"
 export MANPAGER=$PAGER
 export WM="dwm"
-export LOCATION="orenburg"
+#export LOCATION="Orsk"
+export LOCATION="Orenburg"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export GOROOT=/usr/local/go

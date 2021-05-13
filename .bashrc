@@ -6,6 +6,6 @@ fi
 [ -f ~/.aliases ] && . ~/.aliases
 
 # Export variables from zenv if exists
-[ -f ~/.enviroment ] && . ~/.enviroment
+[ -f ~/.environment ] && . ~/.environment
 
 set -o vi

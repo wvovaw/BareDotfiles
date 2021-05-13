@@ -101,15 +101,15 @@ let g:airline_theme = 'codedark'
 " let g:airline_theme = 'solarized'
 "Enable tabline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = "\uE0C6"
-let g:airline#extensions#tabline#left_alt_sep = "\uE0B1"
-let g:airline#extensions#tabline#right_sep = "\uE0C7"
-let g:airline#extensions#tabline#right_alt_sep = "\uE0B3"
+let g:airline#extensions#tabline#left_sep = "\uE0B4"
+let g:airline#extensions#tabline#left_alt_sep = "\uE0B5"
+let g:airline#extensions#tabline#right_sep = "\uE0B6"
+let g:airline#extensions#tabline#right_alt_sep = "\uE0B7"
 
 "Enable powerline fonts
 let g:airline_powerline_fonts = 1
-let g:airline_left_sep = "\uE0C6"
-let g:airline_right_sep = "\uE0C7"
+let g:airline_left_sep = "\uE0B4"
+let g:airline_right_sep = "\uE0B6"
 let g:webdevicons_enable_airline_statusline = 1 " Enable to statusline
 let g:webdevicons_enable_ctrlp = 1  " Enable for CtrlP
 " :echo WebDevIconsGetFileTypeSymbol(expand('%:t'))

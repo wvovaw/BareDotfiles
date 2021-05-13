@@ -11,11 +11,6 @@ autorandr -c
 # exec xcompmgr -o.95 &
 exec picom --experimental-backends &
 
-# Status bar
-# exec ~/Sources/dwm-bar/dwm_bar.sh &
-# exec /home/wvovaw/.local/bin/dwmblocks &
-exec ~/.config/polybar/run.sh &
-
 # Start Dunst notifyer
 exec dunst &
 
@@ -34,6 +29,11 @@ udiskie &
 
 # Play a sound
 paplay /usr/share/sounds/MIUI/stereo/desktop-screen-lock.ogg
+
+# Status bar
+# exec ~/Sources/dwm-bar/dwm_bar.sh &
+# exec /home/wvovaw/.local/bin/dwmblocks &
+exec ~/.config/polybar/run.sh &
 
 # DWM session with reload feature
 # exec /bin/startdwm
