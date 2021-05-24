@@ -169,7 +169,7 @@ map tr restore_trash
 map dr dragon
 
 # Autojump Mapping
-map a push :aj<space>
+#map a push :aj<space>
 
 # Basic Functions
 map . set hidden!
@@ -197,6 +197,7 @@ map gm cd ~/Music
 map gp cd ~/Pictures
 map gv cd ~/Videos
 map gd cd ~/Downloads
+map gd cd ~/Documents/Books
 map gD cd ~/Documents
 map gs cd ~/Scripts
 map gS cd ~/Sources

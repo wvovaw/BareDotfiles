@@ -12,4 +12,4 @@ listview {
 element.selected.normal {
     text-color:       @green;
 }
-@import "/usr/share/rofi/themes/solarized.rasi"
+@import "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
