@@ -11,7 +11,7 @@
 #   qute://help/settings.html
 
 # Uncomment this to still load settings configured via autoconfig.yml
-# config.load_autoconfig()
+config.load_autoconfig()
 
 # Backend to use to display websites. qutebrowser supports two different
 # web rendering engines / backends, QtWebKit and QtWebEngine. QtWebKit
@@ -174,7 +174,7 @@ config.bind(',P', 'spawn --userscript qute-pass --dmenu-invocation dmenu --passw
 
 #c.qt.args = ['force-dark-mode', 'dark']
 #c.backend = 'webengine'
-c.colors.webpage.prefers_color_scheme_dark=True
+# c.colors.webpage.prefers_color_scheme_dark=True
 #c.content.user_stylesheets = ['dark_theme.css']
 
 

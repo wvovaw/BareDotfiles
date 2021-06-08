@@ -202,25 +202,29 @@ label-floating = f
 ;   %name%
 
 ; focused = Selected tag on focused monitor
-label-focused = 
+; label-focused = 
+label-focused =  
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.secondary}
 label-focused-padding = 1
 
 ; unfocused = Unselected tag on unselected monitor
-label-unfocused = 
+; label-unfocused = 
+label-unfocused = 
 label-unfocused-padding = 1
 label-unfocused-underline= ${colors.secondary}
 
 ; visible = Unselected tag, but occupied tag on any monitor
-label-visible = 
+; label-visible = 
+label-visible = 柳
 label-visible-background = ${colors.background}
 ; label-visible-underline = ${colors.secondary}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Unselected tag with window that has urgency hint set
-label-urgent = 
+; label-urgent = 
+label-urgent = 
 ; label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.alert}
 label-urgent-foreground = ${colors.alert}
@@ -229,7 +233,8 @@ label-urgent-padding = 1
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 ; label-empty = %name%
-label-empty = 
+; label-empty = 
+label-empty = 
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
