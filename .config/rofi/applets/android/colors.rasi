@@ -19,4 +19,4 @@
  *
  */
 
-/* @import "../styles/solarized.rasi" */
+@import "../styles/gruvbox.rasi"

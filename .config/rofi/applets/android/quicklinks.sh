@@ -27,25 +27,25 @@ fi
 
 # Links
 google=""
-youtube=""
-twitch=""
+facebook=""
+twitter=""
 github=""
-mail=""
-reddit=""
+mail=""
+youtube=""
 
 # Variable passed to rofi
-options="$google\n$youtube\n$twitch\n$github\n$mail\n$reddit"
+options="$google\n$facebook\n$twitter\n$github\n$mail\n$youtube"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Open In  :  Firefox" -dmenu -selected-row 0)"
 case $chosen in
     $google)
         $app https://www.google.com &
         ;;
-    $youtube)
-        $app https://www.youtube.com &
+    $facebook)
+        $app https://www.facebook.com &
         ;;
-    $twitch)
-        $app https://www.twitch.tv &
+    $twitter)
+        $app https://www.twitter.com &
         ;;
     $github)
         $app https://www.github.com &
@@ -53,8 +53,8 @@ case $chosen in
     $mail)
         $app https://www.gmail.com &
         ;;
-    $reddit)
-        $app https://www.reddit.com &
+    $youtube)
+        $app https://www.youtube.com &
         ;;
 esac
 

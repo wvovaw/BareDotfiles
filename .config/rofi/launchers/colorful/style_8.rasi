@@ -20,7 +20,6 @@ configuration {
 }
 
 @import "colors.rasi"
-@import "solarized.rasi"
 
 window {
     transparency:                   "real";

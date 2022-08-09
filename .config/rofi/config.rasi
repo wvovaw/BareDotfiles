@@ -4,12 +4,3 @@ configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
 }
-
-listview {
-  scrollbar: false;
-}
-
-element.selected.normal {
-    text-color:       @green;
-}
-@import "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
