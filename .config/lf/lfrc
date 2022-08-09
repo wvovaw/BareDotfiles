@@ -62,7 +62,7 @@ cmd chmod ${{
 }}
 
 cmd stouch ${{
-  printf "File Name: "
+  printf "ﱐ (root) File Name: "
   read ans
   sudo $EDITOR $ans
 }}
