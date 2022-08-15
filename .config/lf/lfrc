@@ -83,7 +83,7 @@ cmd run_script ${{
 #   lf -remote "send $id $cmd \"$res\""
 # }}
 
-cmd dragon %dragon -a -x $fx   # drag and drop selected file(s) and exit
+cmd dragon %dragon -a -x "$fx"   # drag and drop selected file(s) and exit
 cmd dragon-stay %dragon -a $fx # drag and drop selected file(s) and stay
 
 # Archive bindings
