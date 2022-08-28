@@ -14,20 +14,30 @@ export WM="dwm"
 export LOCATION="Orenburg"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# go vars
 export GOROOT=/usr/local/go
 export GOPATH=~/Dev/Go
 export GOBIN=$GOPATH/bin
+
+# cargo rust vars
 export CARGOROOT=~/.cargo
+export CARGOBIN=~/.cargo/bin
+. "$HOME/.cargo/env" # runs cargo environment
+
+# yarn vars
+export YARNBIN=$HOME/.yarn/bin
+export YARNCONFIG=$HOME/.config/yarn/global/node_modules/.bin
+
+# bin vars
 export LBIN=~/.local/bin
-export SPICETIFY=/usr/lib/spicetify-cli
 export SCRIPTS=~/Scripts
 
-export PATH=$PATH:$SCRIPTS:$LBIN:$CARGOROOT/bin:$GOROOT/bin:$GOPATH/bin:$SPICETIFY
+export PATH="$PATH:$SCRIPTS:$LBIN:$YARNBIN:$YARNCONFIG:$CARGOBIN:$GOBIN"
 
-# LF_ICONS=$(sed ~/.config/diricons \
-# -e '/^[ \t]*#/d'       \
-# -e '/^[ \t]*$/d'       \
-# -e 's/[ \t]\+/=/g'     \
-# -e 's/$/ /')
-# LF_ICONS=${LF_ICONS//$'\n'/:}
-# export LF_ICONS
+LF_ICONS=$(sed ~/.config/diricons \
+-e '/^[ \t]*#/d'       \
+-e '/^[ \t]*$/d'       \
+-e 's/[ \t]\+/=/g'     \
+-e 's/$/ /')
+LF_ICONS=${LF_ICONS//$'\n'/:}
+export LF_ICONS

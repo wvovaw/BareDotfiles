@@ -7,10 +7,6 @@ plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 #----------------------------------------
 
-# Set transparrency for xterm
-[ -n "$XTERM_VERSION" ] && transset --id "$WINDOWID" >/dev/null
-
-
 # Load aliases
 [ -f ~/.aliases ] && . ~/.aliases
 

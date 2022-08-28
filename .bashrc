@@ -9,3 +9,4 @@ fi
 [ -f ~/.environment ] && . ~/.environment
 
 set -o vi
+. "$HOME/.cargo/env"
