@@ -1,18 +1,10 @@
-export EDITOR="nvim"
-export READER="zathura"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-#export BROWSER="chromium"
-export BROWSER="brave"
-export VIDEO="mpv"
-export IMAGE="sxiv"
-export OPENER="xdg-open"
 export PAGER="bat"
 export MANPAGER=$PAGER
-export WM="dwm"
-# export LOCATION="Orsk"
 export LOCATION="Orenburg"
-export _JAVA_AWT_WM_NONREPARENTING=1
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="alacritty"
+export TERM="xterm-256color"
 
 # go vars
 export GOROOT=/usr/local/go
@@ -32,7 +24,14 @@ export YARNCONFIG=$HOME/.config/yarn/global/node_modules/.bin
 export LBIN=~/.local/bin
 export SCRIPTS=~/Scripts
 
-export PATH="$PATH:$SCRIPTS:$LBIN:$YARNBIN:$YARNCONFIG:$CARGOBIN:$GOBIN"
+# node version manager
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# deno vars
+export DENOBIN="/home/wvovaw/.deno/bin"
+
+export PATH="$PATH:$SCRIPTS:$LBIN:$YARNBIN:$YARNCONFIG:$CARGOBIN:$GOBIN:$DENOBIN"
 
 LF_ICONS=$(sed ~/.config/diricons \
 -e '/^[ \t]*#/d'       \

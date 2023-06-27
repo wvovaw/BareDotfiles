@@ -1,32 +1,30 @@
 # Overrides
 alias cp='cp -i'
+alias md=mkdir
 
 # Weather
 alias wea='clear;curl wttr.in/$LOCATION'
 alias wea2='curl -s "wttr.in/$LOCATION?format=2"'
-alias wea3='curl v2d.wttr.in/Orenburg'
+alias wea3='curl v2d.wttr.in/$LOCATION'
 
 # Common aliases
 alias lf=/home/wvovaw/.config/lf/lfrun
 alias nv=nvim
-alias music=ncmpcpp 
-alias am=alsamixer
-alias pm=pamixer
 
 # Xbps
-alias xi='sudo xbps-install'
-alias xr='sudo xbps-remove'
-alias xql='sudo xbps-query -s'
-alias xqr='sudo xbps-query -Rs'
+#alias xi='sudo xbps-install'
+#alias xr='sudo xbps-remove'
+#alias xql='sudo xbps-query -s'
+#alias xqr='sudo xbps-query -Rs'
 
 # Special comands
 alias please='sudo !!'
-alias mm='sudo mount -t ntfs-3g -o rw,nls=utf8,umask=0222 /dev/sdb1 ~/Windows/Y'
-alias mw='sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda4 ~/Windows/C'
-alias wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
-alias off='sudo shutdown -P now'
-alias reb='sudo reboot now'
-alias synctime='sudo ntpdate -u 0.ru.pool.ntp.org'
+#alias mm='sudo mount -t ntfs-3g -o rw,nls=utf8,umask=0222 /dev/sdb1 ~/Windows/Y'
+#alias mw='sudo mount -t ntfs -o nls=utf8,umask=0222 /dev/sda4 ~/Windows/C'
+#alias wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant-wlp3s0.conf'
+#alias off='sudo shutdown -P now'
+#alias reb='sudo reboot now'
+#alias synctime='sudo ntpdate -u 0.ru.pool.ntp.org'
 alias clear='[ $[$RANDOM % 10] = 0 ] && timeout 1 unimatrix -n -s 99 -l orCs || clear'
 alias cls=clear
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
@@ -50,16 +48,17 @@ alias nud='npm un --save-dev'
 
 # ls to exa
 alias la='exa -al --icons --color=always --group-directories-first'
+alias l='exa -al --icons --color=always --group-directories-first'
 alias ls='exa -a  --icons --color=always --group-directories-first'
 alias ll='exa -l  --icons --color=always --group-directories-first'
 alias lt='exa -aT --icons --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 
 # Dir hopping
-alias src='cd ~/Sources'
-alias scr='cd ~/Scripts'
-alias dev='cd ~/Dev'
-alias cfg='cd ~/.config'
+#alias src='cd ~/Sources'
+#alias scr='cd ~/Scripts'
+#alias dev='cd ~/Dev'
+#alias cfg='cd ~/.config'
 # alias -s {js,rs,c,h,cpp,cxx,hpp,hxx,json,md,css,scss,sass,sh,vim,rb,py,Makefile,MAKEFILE,makefile,yml.yaml,toml,tml,cs,ts,html}=nvim
 
 n ()

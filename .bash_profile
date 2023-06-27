@@ -1,3 +1,6 @@
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+. "$HOME/.cargo/env"

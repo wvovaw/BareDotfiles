@@ -150,12 +150,12 @@ map r
 
 # File Openers
 map ee $$EDITOR "$f"
-map ec %code-oss "$f"
+map ec %code "$f"
 map rs run_script
 
 # Openers
 map ox %xdg-open "$f"
-map oc %code-oss "$f"
+map oc %code "$f"
 
 # Archive Mappings
 map az zip
@@ -165,9 +165,10 @@ map ab tarbz
 map au unarchive
 
 # Trash Mappings
+map tr trash
 map dd trash
-map tc clear_trash
-map tr restore_trash
+map trc clear_trash
+map trr restore_trash
 
 # Dragon Mapping
 map dr dragon
@@ -177,7 +178,7 @@ map dr dragon
 
 # Basic Functions
 map . set hidden!
-map DD delete
+map DD trash # I remaped it to trash because I just removed accidently everything from .config :_(
 map p paste
 map x cut
 map y copy
@@ -186,24 +187,20 @@ map t touch
 map st stouch
 map md mkdir
 map ch chmod
-map bg setwallpaper
 map mv rename
 map gg top
-map G bottom
+# map G bottom
 map R reload
 map C clear
 map U unselect
 
 # Movement
-map gtr cd ~/.local/share/Trash/files
-map gh cd ~
-map gus cd /run/media/wvovaw
+map tr cd ~/.local/share/Trash/files
+map ~ cd ~
 map gm cd ~/Music
 map gp cd ~/Pictures
 map gv cd ~/Videos
-map gb cd ~/Documents/Books
-map gdo cd ~/Documents
+map gdc cd ~/Documents
 map gdw cd ~/Downloads
-map gsc cd ~/Scripts
-map gsr cd ~/Sources
+map gdv cd ~/Dev
 map gc cd ~/.config
