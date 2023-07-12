@@ -122,4 +122,3 @@ set -o vi
 
 # Load tat.sh
 [ -f ~/Scripts/tat.sh ] && . ~/Scripts/tat.sh
-
