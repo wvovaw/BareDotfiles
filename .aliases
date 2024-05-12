@@ -46,13 +46,13 @@ alias nu='npm un'
 alias nid='npm i --save-dev'
 alias nud='npm un --save-dev'
 
-# ls to exa
-alias la='exa -al --icons --color=always --group-directories-first'
-alias l='exa -al --icons --color=always --group-directories-first'
-alias ls='exa -a  --icons --color=always --group-directories-first'
-alias ll='exa -l  --icons --color=always --group-directories-first'
-alias lt='exa -aT --icons --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+# ls to eza
+alias la='eza -al --icons --color=always --group-directories-first'
+alias l='eza -al --icons --color=always --group-directories-first'
+alias ls='eza -a  --icons --color=always --group-directories-first'
+alias ll='eza -l  --icons --color=always --group-directories-first'
+alias lt='eza -aT --icons --color=always --group-directories-first'
+alias l.='eza -a | egrep "^\."'
 
 # Dir hopping
 #alias src='cd ~/Sources'
